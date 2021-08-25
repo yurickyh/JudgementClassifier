@@ -1,0 +1,9 @@
+{
+    "BERT_MODEL": "neuralmind/bert-large-portuguese-cased",
+    "PRE_TRAINED_MODEL": "assets/model_state.bin",
+    "MAX_TOKEN_LENGTH": 512,
+    "TRAIN_DATASET_LENGTH": 3866,
+    "BATCH_SIZE": 4,
+    "EPOCHS": 10,
+    "LEARNING_RATE": 2e-5
+}

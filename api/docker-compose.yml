@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  backend:
+    build: backend/
+    image: classifier_back
+    container_name: classifier_back
+    volumes:
+      - ./backend:/src
+    ports:
+      - "8000:8000"
+    restart: always
+  frontend:
+    build: frontend/
+    image: classifier_front
+    container_name: classifier_front
+    volumes:
+      - ./frontend:/src
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    restart: always
+  
