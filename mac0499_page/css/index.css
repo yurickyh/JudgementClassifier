@@ -1,0 +1,55 @@
+.navBar {
+    background-color: 14213d;
+}
+
+#introductionImage {
+    background: url("../images/hammer.jpg") no-repeat center center;
+    height: 600px;
+}
+
+#initialPlanningImage {
+    background: url("../images/initial-planning.jpg") no-repeat center center;
+    height: 600px;
+}
+
+.introduction {
+    background-color: #fca311;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 45px;
+}
+
+.justifiedText {
+    text-align: justify !important;
+    text-justify: inter-character !important;
+}
+
+#initialPlanning {
+    padding-top: 100px;
+    padding-bottom: 100px;   
+}
+
+.downloadButton {
+    width: 150px;
+    height: 50px;
+    background-color: #fca311;
+    color: black;
+}
+
+.repositoryButton {
+    width: 170px;
+    height: 50px;
+    background-color: #fca311;
+    color: black;
+}
+
+
+.navDisabled {
+    cursor: default;
+    pointer-events: none;
+}
