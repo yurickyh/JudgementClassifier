@@ -1,4 +1,4 @@
-FROM node
+FROM node:16-alpine3.12
 WORKDIR /frontend/
 
 ENV PATH /frontend/node_modules/.bin:$PATH
