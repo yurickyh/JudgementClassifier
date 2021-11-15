@@ -23,6 +23,13 @@ const getClassification = (ementa) => {
   })
 }
 
+const getSimpleClassification = (ementa) => {
+  return fetchApi('/simple_classify/', ementa).then(data => {
+    if (data)
+      return data.data;
+  })
+}
+
 const loadLawDocuments = () => {
   const allLawDocuments = [];
 
@@ -45,10 +52,15 @@ function App() {
     confidence: '',
     probabilities: {}
   })
+  let [simpleResponse, setSimpleResponse] = useState({
+    branch: ''
+  })
 
   const handleClick = async () => {
     const res = await getClassification(ementa);
     setResponse(res);
+    const simpleRes = await getSimpleClassification(ementa);
+    setSimpleResponse(simpleRes)
   }
 
   const handleChange = e => {
@@ -80,6 +92,10 @@ function App() {
           <input type="text" id="confidence" value={ response.confidence } disabled />
           <label className="input-label" htmlFor="percentage">Porcentagens:</label><br />
           <textarea id="percentage" rows="13" value={ JSON.stringify(response.probabilities, null, 2) } disabled></textarea>
+          <div className='box'>
+            <label className="input-label" htmlFor="branch">Ramo do Direito Classificado pelo Modelo Simples:</label><br />
+            <input type="text" id="branch" value={ simpleResponse.branch } disabled />
+          </div>
         </div>
       </form>
     </div>

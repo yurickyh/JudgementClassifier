@@ -51,3 +51,14 @@ class LawBranch(Enum):
             int: number of branches
         """
         return len(LawBranch)
+    
+    @staticmethod
+    def get_lawbranch_by_index(index) -> str:
+      """Retrieves the name of a LawBranch given the index number.
+
+        Returns:
+            str: name of the LawBranch
+        """
+      for law_branch in LawBranch:
+        if law_branch.value[0] == index:
+          return law_branch.value[1]

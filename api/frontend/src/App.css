@@ -131,6 +131,14 @@ button:hover {
   font-weight: 800;
 }
 
+.box {
+  border-style: solid;
+  border-radius: 20px;
+  border-width: .5px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
 @media (min-width: 568px) {
   form {
       width: 60%;
