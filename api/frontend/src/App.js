@@ -5,6 +5,7 @@ import csvFile from './All_Law_Documents.csv';
 import * as d3 from 'd3';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
+import Chart from './Chart';
 
 const url = 'http://localhost:8000'
 
@@ -92,6 +93,7 @@ function App() {
           <input type="text" id="confidence" value={ response.confidence } disabled />
           <label className="input-label" htmlFor="percentage">Porcentagens:</label><br />
           <textarea id="percentage" rows="13" value={ JSON.stringify(response.probabilities, null, 2) } disabled></textarea>
+          <Chart probabilities={response.probabilities} />
           <div className='box'>
             <label className="input-label" htmlFor="branch">Ramo do Direito Classificado pelo Modelo Simples:</label><br />
             <input type="text" id="branch" value={ simpleResponse.branch } disabled />
