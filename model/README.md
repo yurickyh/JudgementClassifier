@@ -10,3 +10,7 @@ This folder contains all the notebooks used to build the model and assess its pe
 - `Fine_Tuning_Word_Truncated.ipynb`: fine tunes the Front Back model. With this notebook, it is possible to define values for hyperparameters and train a new Front Back model every time. For each execution, you can test a set of hyperparameters. You must make use of multiple runs to perform the fine tuning process.
 - `Index on Model-Word_Truncated.ipynb`: TODO.
 - `Metrics.ipynb`: evaluates the final state of a model. This notebook will load a model that classifies law documents summary into law branches and then assess its performance. The evaluation will happen by using the test dataset.
+- `Model-Word_Batches.ipynb`: defines the structure of the model that classifies a law dacument summary into a law branch. For this notebook, the strategy used to train the model is dividing the law branch summary into a batch of sentences.
+- `Model-Word_Front_Back.ipynb`: defines the structure of the model that classifies a law dacument summary into a law branch. For this notebook, the strategy used to train the model is extracting part of the introduction and part of the conclusion from the text.
+- `Model-Word_Truncated.ipynb`: defines the structure of the model that classifies a law dacument summary into a law branch. For this notebook, the strategy used to train the model is truncating the initial part of text up to the limit that BERT accepts to tokenize.
+- `Processual Class on Model-Word_Truncated.ipynb`: TODO.
