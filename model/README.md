@@ -2,15 +2,15 @@
 
 This folder contains all the notebooks used to build the model and assess its performance.
 
-- `Build_Keywords_JSON.ipynb`: TODO.
+- `Build_Keywords_JSON.ipynb`: responsible for preprocess the data present on the key words and expressions column of the dataset and map them to their specific law branch in a JSON structure.
 - `Data_Preprocessing.ipynb`: responsible for preprocess data and rearrange the collection of training/evaluation data in order to be used for building the model. The result is having three different .csv files, one for each subset of data. There are two actions performed in this notebook:
   1. Each law branch is mapped into an integer value. Using this method, BERT will be able to associate a law document to a law branch (represented as an integer code).
   2. The notebook divides up the entire dataset into three other groups: Training, Validation, and Test. In order to divide the data, the notebook uses the method 70% (Training), 15% (Validation), and 15% (Test).
 - `Descriptive_Data_Analysis.ipynb`: created to summarize data in a human way. Large amounts of data are hard to understand, from the human perspective. Therefore, some tables and charts may be useful. This notebook wraps up the entire collection of data to visualize patterns and metrics of it. Example of analysis: frequent words, frequent words by law branch, numbeer of law documents by law branch, number of law documents that are possible to classify through law document summary, etc.
 - `Fine_Tuning_Word_Truncated.ipynb`: fine tunes the Front Back model. With this notebook, it is possible to define values for hyperparameters and train a new Front Back model every time. For each execution, you can test a set of hyperparameters. You must make use of multiple runs to perform the fine tuning process.
-- `Index on Model-Word_Truncated.ipynb`: TODO.
+- `Index on Model-Word_Front_Back.ipynb`: defines the structure of a model that classifies law documents summaries taking the values of the indexation column as input as well as the summaries and using the optimized hyperparameters found in the Front Back model fine tuning process.
 - `Metrics.ipynb`: evaluates the final state of a model. This notebook will load a model that classifies law documents summary into law branches and then assess its performance. The evaluation will happen by using the test dataset.
 - `Model-Word_Batches.ipynb`: defines the structure of the model that classifies a law dacument summary into a law branch. For this notebook, the strategy used to train the model is dividing the law branch summary into a batch of sentences.
 - `Model-Word_Front_Back.ipynb`: defines the structure of the model that classifies a law dacument summary into a law branch. For this notebook, the strategy used to train the model is extracting part of the introduction and part of the conclusion from the text.
 - `Model-Word_Truncated.ipynb`: defines the structure of the model that classifies a law dacument summary into a law branch. For this notebook, the strategy used to train the model is truncating the initial part of text up to the limit that BERT accepts to tokenize.
-- `Processual Class on Model-Word_Truncated.ipynb`: TODO.
+- `Processual Class on Model-Word_Front_Back.ipynb`: defines the structure of a model that classifies law documents summaries taking the values of the processual classes column as input as well as the summaries and using the optimized hyperparameters found in the Front Back model fine tuning process.
