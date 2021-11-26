@@ -3,6 +3,7 @@
 This folder contains all the notebooks used to build the model and assess its performance.
 
 - `Build_Keywords_JSON.ipynb`: responsible for preprocess the data present on the key words and expressions column of the dataset and map them to their specific law branch in a JSON structure.
+- `Compare on Test Data.ipynb`: evaluates the two models obtained from the fine tuning process on the test dataset and compares the results to obtain the final model.
 - `Data_Preprocessing.ipynb`: responsible for preprocess data and rearrange the collection of training/evaluation data in order to be used for building the model. The result is having three different .csv files, one for each subset of data. There are two actions performed in this notebook:
   1. Each law branch is mapped into an integer value. Using this method, BERT will be able to associate a law document to a law branch (represented as an integer code).
   2. The notebook divides up the entire dataset into three other groups: Training, Validation, and Test. In order to divide the data, the notebook uses the method 70% (Training), 15% (Validation), and 15% (Test).
@@ -14,3 +15,4 @@ This folder contains all the notebooks used to build the model and assess its pe
 - `Model-Word_Front_Back.ipynb`: defines the structure of the model that classifies a law dacument summary into a law branch. For this notebook, the strategy used to train the model is extracting part of the introduction and part of the conclusion from the text.
 - `Model-Word_Truncated.ipynb`: defines the structure of the model that classifies a law dacument summary into a law branch. For this notebook, the strategy used to train the model is truncating the initial part of text up to the limit that BERT accepts to tokenize.
 - `Processual Class on Model-Word_Front_Back.ipynb`: defines the structure of a model that classifies law documents summaries taking the values of the processual classes column as input as well as the summaries and using the optimized hyperparameters found in the Front Back model fine tuning process.
+- `TF-IDF Simple Model.ipynb`: creates multiple simple models with the TF-IDF vectorizer and different approximations and chooses the best of them to compare with the final model.
