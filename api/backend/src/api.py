@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from .classifier.model import Model, get_model
 from .classifier.simple_model import SimpleModel, get_simple_model
+from .classifier.lr_model import LRModel, get_lr_model
 
 
 app = FastAPI()
@@ -48,4 +49,9 @@ def classify(request: LawDocumentRequest, model: Model = Depends(get_model)):
 @app.post('/simple_classify', response_model=LawDocumentSimpleResponse)
 def simple_classify(request: LawDocumentSimpleRequest, simple_model: SimpleModel = Depends(get_simple_model)):
     branch = simple_model.classify(request.annotation)
+    return LawDocumentSimpleResponse(branch=branch)
+
+@app.post('/lr_classify', response_model=LawDocumentSimpleResponse)
+def lr_classify(request: LawDocumentSimpleRequest, lr_model: LRModel = Depends(get_lr_model)):
+    branch = lr_model.classify(request.annotation)
     return LawDocumentSimpleResponse(branch=branch)

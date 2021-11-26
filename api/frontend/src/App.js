@@ -31,6 +31,13 @@ const getSimpleClassification = (ementa) => {
   })
 }
 
+const getLRClassification = (ementa) => {
+  return fetchApi('/lr_classify/', ementa).then(data => {
+    if (data)
+      return data.data;
+  })
+}
+
 const loadLawDocuments = () => {
   const allLawDocuments = [];
 
@@ -56,12 +63,17 @@ function App() {
   let [simpleResponse, setSimpleResponse] = useState({
     branch: ''
   })
+  let [lrResponse, setLRResponse] = useState({
+    branch: ''
+  })
 
   const handleClick = async () => {
     const res = await getClassification(ementa);
     setResponse(res);
     const simpleRes = await getSimpleClassification(ementa);
-    setSimpleResponse(simpleRes)
+    setSimpleResponse(simpleRes);
+    const lrRes = await getLRClassification(ementa);
+    setLRResponse(lrRes);
   }
 
   const handleChange = e => {
@@ -94,6 +106,10 @@ function App() {
           <label className="input-label" htmlFor="percentage">Porcentagens:</label><br />
           <textarea id="percentage" rows="13" value={ JSON.stringify(response.probabilities, null, 2) } disabled></textarea>
           <Chart probabilities={response.probabilities} />
+          <div className='box'>
+            <label className="input-label" htmlFor="branch">Ramo do Direito Classificado pelo Modelo de Regressão Logística:</label><br />
+            <input type="text" id="branch" value={ lrResponse.branch } disabled />
+          </div>
           <div className='box'>
             <label className="input-label" htmlFor="branch">Ramo do Direito Classificado pelo Modelo Simples:</label><br />
             <input type="text" id="branch" value={ simpleResponse.branch } disabled />

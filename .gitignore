@@ -4,7 +4,7 @@
 /api/frontend/node_modules
 /.pnp
 .pnp.js
-/api/backend/assets
+/api/backend/assets/model_state.bin
 
 # testing
 /coverage
