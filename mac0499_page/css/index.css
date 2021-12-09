@@ -35,8 +35,15 @@
     padding-bottom: 100px;   
 }
 
-.downloadButton {
+.downloadProposalButton {
     width: 150px;
+    height: 50px;
+    background-color: #fca311;
+    color: black;
+}
+
+.downloadSummaryButton {
+    width: 200px;
     height: 50px;
     background-color: #fca311;
     color: black;

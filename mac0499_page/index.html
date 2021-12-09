@@ -44,13 +44,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#repository">
-                            <b>Repositório</b>
+                        <a class="nav-link text-light" href="#summary">
+                            <b>Resumo</b>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light navDisabled" href="#">
-                            <b>Monografia</b>
+                        <a class="nav-link text-light" href="#repository">
+                            <b>Repositório</b>
                         </a>
                     </li>
                     </ul>
@@ -110,7 +110,7 @@
                             os acórdãos do STF dentre os diversos ramos do Direito. 
                         </p>
                         <div class="align-items-center row justify-content-center">
-                            <a class="btn btn-rounded downloadButton" href="MAC0499___Proposta.pdf" role="button" target="_blank">
+                            <a class="btn btn-rounded downloadProposalButton" href="MAC0499___Proposta.pdf" role="button" target="_blank">
                                 <i class="fas fa-download fa-2x"></i> <b>PROPOSTA</b>
                             </a>                        
                         </div>
@@ -122,10 +122,37 @@
 
                 <hr>
 
-                <div id="repository" class="row justify-content-center align-items-center" data-aos="flip-left" style="margin-top: 75px; margin-bottom: 100px;">
+                <div id="summary" class="row justify-content-center align-items-center" data-aos="flip-left" style="margin-top: 75px; margin-bottom: 75px;">
                     <div class="col-md-4" style="margin-left: 15px;">
-                        <img src="./images/GitHub-Logo.png" alt="initial-planning" class="img-fluid rounded shadow-3-strong" />
+                        <img src="./images/initial-planning.jpg" alt="initial-planning" class="img-fluid rounded shadow-3-strong" />
                     </div>
+                    <div class="col-md-4 text-left justifiedText" style="margin-left: 15px;">
+                        <h1 class="title">Resumo</h2>
+                        <p>
+                            Os acórdãos são documentos que representam decisões judiciais que se enquadram em uma certa área do Direito. Isso
+                            significa que os conceitos que permeiam a decisião se destacam em um determinado ramo do Direito.
+                            Atualmente, em uma tentativa de definir a qual ramo um acórdão pertence, é preciso que se tenha à disposição
+                            uma pessoa que tenha conhecimento o suficiente para avaliar o documento. Dessa forma, o projeto propõe o uso
+                            da arquitetura BERT (no inglês, <i>Bidirectional Encoder Representations from Transformers</i>), em específico de uma
+                            das suas aplicações para a Língua Portuguesa chamada BERTimbau, para a resolução desse problema por meio de redes neurais.
+                            Nesse caso, o modelo foi treinado utilizando um conjunto de acórdãos já classificados para resultar em um classificador
+                            que possa identificar o ramo do Direito para um acórdão qualquer.
+
+                            A monografia abaixo apresenta a motivação por trás do problema, assim como a fundamentação teórica para a resolução do problema.
+                            Depois disso, ela também descreve o processo de construção e experimentação do classificador. Por fim, a monografia detalha alguns
+                            resultados encontrados durante a conclusão do trabalho.
+                        </p>
+                        <div class="align-items-center row justify-content-center">
+                            <a class="btn btn-rounded downloadSummaryButton" href="" role="button" target="_blank">
+                                <i class="fas fa-download fa-2x"></i> <b>MONOGRAFIA</b>
+                            </a>                        
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div id="repository" class="row justify-content-center align-items-center" data-aos="flip-left" style="margin-top: 75px; margin-bottom: 100px;">
                     <div class="col-md-4 text-left justifiedText" style="margin-left: 15px;">
                         <h1 class="title">Repositório</h2>
                         <p>
@@ -142,6 +169,9 @@
                                 <i class="fab fa-github fa-2x"></i><b>  REPOSITÓRIO</b>
                             </a>                        
                         </div>
+                    </div>
+                    <div class="col-md-4" style="margin-left: 15px;">
+                        <img src="./images/GitHub-Logo.png" alt="initial-planning" class="img-fluid rounded shadow-3-strong" />
                     </div>
                 </div>
             </div>
