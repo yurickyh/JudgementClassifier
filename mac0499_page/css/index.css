@@ -1,6 +1,10 @@
 .navBar {
     background-color: 14213d;
-    font-size: 30px;
+    font-size: 25px;
+}
+
+.nav-item:hover {
+    background-color: #243b6e !important;
 }
 
 #introductionImage {
@@ -50,12 +54,18 @@
 }
 
 .repositoryButton {
-    width: 170px;
-    height: 50px;
-    background-color: #fca311;
-    color: black;
+    width: 170px !important;
+    height: 50px !important;
+    background-color: #fca311 !important;
+    color: black !important;
 }
 
+.videoButton {
+    width: 190px !important;
+    height: 50px !important;
+    background-color: #fca311 !important;
+    color: black !important;
+}
 
 .navDisabled {
     cursor: default;

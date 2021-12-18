@@ -15,11 +15,12 @@
         <!--External Style-->
         <link rel="stylesheet" type="text/css" href="css/index.css">
     </head>
-    <title>MAC0499 - Aplicação do BERT para Classificação de Acórdãos</title>
+    <title>MAC0499 - Aplicação do BERT para Classificação de Acórdãos do STF por Ramos do Direito</title>
     <body>
         <header>
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg navbar-light fixed-top navBar">
+                <!-- my-2, my-lg-0, me-sm-0, my-sm-0 -->
                 <div class="container-fluid">
                 <button
                     class="navbar-toggler"
@@ -34,26 +35,31 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link text-light" aria-current="page" href="#">
-                            <b>Início</b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="#initialPlanning">
-                            <b>Proposta</b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="#summary">
-                            <b>Resumo</b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="#repository">
-                            <b>Repositório</b>
-                        </a>
-                    </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-light" aria-current="page" href="#">
+                                <b>Início</b>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#initialPlanning">
+                                <b>Proposta</b>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#summary">
+                                <b>Resumo | Monografia</b>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#repository">
+                                <b>Repositório</b>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#example">
+                                <b>Exemplo de aplicação</b>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 </div>
@@ -64,7 +70,7 @@
             <div class="container-fluid text-black">
                 <div class="row introduction justify-content-center align-items-center">
                     <div class="text-center mb-5" style="margin-top: 100px;">
-                        <h1 class="title"><b>Aplicação do BERT para Classificação de Acórdãos</b></h1>
+                        <h1 class="title"><b>Aplicação do BERT para Classificação de Acórdãos<br/>do STF por Ramos do Direito</b></h1>
                     </div>
                     <div class="col-md-4" style="margin-right: 15px; margin-top: 75px;">
                         <img src="./images/intro2.jpg" alt="hammer" class="img-fluid rounded shadow-3-strong" />
@@ -173,6 +179,32 @@
                     </div>
                     <div class="col-md-4" style="margin-left: 15px;">
                         <img src="./images/GitHub-Logo.png" alt="initial-planning" class="img-fluid rounded shadow-3-strong" />
+                    </div>
+                </div>
+
+                <hr>
+
+                <div id="example" class="row justify-content-center align-items-center" data-aos="flip-left" style="margin-top: 75px; margin-bottom: 100px;">
+                    <div class="col-md-4" style="margin-left: 15px;">
+                        <iframe width="576" height="432" src="https://www.youtube.com/embed/WQR8MrfihU4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <!-- <iframe src="https://drive.google.com/file/d/1S2w87k5g7RXWVZoWCVkqakVZ3wkbDaYw/preview" width="576" height="432" allow="autoplay"></iframe> -->
+                    </div>
+                    <div class="col-md-4 text-left justifiedText" style="margin-left: 15px;">
+                        <h1 class="title">Exemplo de uso do classificador</h2>
+                        <p>
+                            Como uma forma de exemplificar um possível uso do classificador, os alunos desenvolveram uma simples aplicação composta
+                            por uma página no <i>frontend</i> responsável por realizar requisições ao <i>backend</i> que, por sua vez, consulta o classificador.
+                            <br/>
+                            Para isso, o usuário pode inserir a ementa do acórdão para utilizar o modelo e verificar uma predição do ramo do Direito ao qual o documento pertence.
+                            Um outro uso seria selecionar um dos acórdãos disponíveis na base de dados da própria aplicação que irá recuperar a ementa automaticamente.
+                            <br/>
+                            Verifique uma demonstração ao lado.
+                        </p>
+                        <div class="align-items-center row justify-content-center">
+                            <a class="btn btn-rounded videoButton" href="https://www.youtube.com/watch?v=WQR8MrfihU4" role="button" target="_blank">
+                                <i class="fas fa-video fa-2x"></i><b>  VÍDEO ORIGINAL</b>
+                            </a>                        
+                        </div>
                     </div>
                 </div>
             </div>
