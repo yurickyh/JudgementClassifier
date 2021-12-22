@@ -99,7 +99,7 @@
                         <h1 class="title">Proposta</h2>
                         <p>
                             Assim como o Direito avança a todo momento, a tecnologia pode trazer grandes
-                            benefícios com o poder de processamento que se tem atualmente. Isso significa que
+                            benefícios com o poder de processamento que se tem atualmente. Em outras palavras,
                             obter uma grande quantidade de dados pode significar extrair padrões e, potencialmente,
                             desenvolver uma certa inteligência de decisão a partir deles.
 
@@ -107,13 +107,13 @@
                             concretas. Em situações como essa, ferramentas podem ser criadas para
                             auxiliar na obtenção de informações úteis a partir de um grande conjunto de dados.
                             Um exemplo disso seria a a ferramenta de busca de acórdãos disponibilizada pelo
-                            Supremo Tribunal Federal (STF). 
+                            Supremo Tribunal Federal (STF): <a href="https://jurisprudencia.stf.jus.br/pages/search">Pesquisa de Jurisprudência</a>. 
 
                             Entretanto, mesmo com um largo acervo, certas informações ainda precisam ser
-                            extraídas do conteúdo do acórdão obtido numa busca nessa ferramenta do STF, como por
-                            exemplo, o ramo do Direito no qual o acórdão em questão pertence. Assim, esse trabalho
+                            extraídas do conteúdo do acórdão, dado que a ferramenta do STF não fornece-as. Um
+                            exemplo seria o ramo do Direito no qual o acórdão em questão pertence. Assim, esse trabalho
                             tem a intenção de desenvolver um mecanismo de classificação automática a partir de técnicas
-                            de aprendizagem de máquina que permita executar essa distinção e classificar corretamente
+                            de aprendizagem de máquina que permita executar essa distinção e rotular corretamente
                             os acórdãos do STF dentre os diversos ramos do Direito. 
                         </p>
                         <div class="align-items-center row justify-content-center">
@@ -136,12 +136,12 @@
                     <div class="col-md-4 text-left justifiedText" style="margin-left: 15px;">
                         <h1 class="title">Resumo</h2>
                         <p>
-                            Os acórdãos são documentos que representam decisões judiciais que se enquadram em uma certa área do Direito. Isso
+                            Os acórdãos são documentos que representam decisões judiciais e se enquadram em uma certa área do Direito. Isso
                             significa que os conceitos que permeiam a decisião se destacam em um determinado ramo do Direito.
                             Atualmente, em uma tentativa de definir a qual ramo um acórdão pertence, é preciso que se tenha à disposição
                             uma pessoa que tenha conhecimento o suficiente para avaliar o documento. Dessa forma, o projeto propõe o uso
-                            da arquitetura BERT (no inglês, <i>Bidirectional Encoder Representations from Transformers</i>), em específico de uma
-                            das suas aplicações para a Língua Portuguesa chamada BERTimbau, para a resolução desse problema por meio de redes neurais.
+                            da arquitetura <a href="https://arxiv.org/abs/1810.04805">BERT</a> (no inglês, <i>Bidirectional Encoder Representations from Transformers</i>), em específico de uma
+                            das suas aplicações para a Língua Portuguesa chamada <a href="https://arxiv.org/abs/1909.10649">BERTimbau</a>, para a resolução desse problema por meio de redes neurais.
                             Nesse caso, o modelo foi treinado utilizando um conjunto de acórdãos já classificados para resultar em um classificador
                             que possa identificar o ramo do Direito para um acórdão qualquer.
 
@@ -163,10 +163,12 @@
                     <div class="col-md-4 text-left justifiedText" style="margin-left: 15px;">
                         <h1 class="title">Repositório</h2>
                         <p>
-                            O projeto utilizou principalmente o Google Drive como forma de armazenar os Jupyter Notebooks.
-                            Isso ocorreu por conta do uso do Google Colab. No entanto, como uma forma de tornar os Notebooks públicos
+                            O projeto utilizou principalmente o 
+                            <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwjCxcGtpvb0AhWKh5EKHXsYBxoYABAAGgJjZQ&ohost=www.google.com&cid=CAESQOD25IE6rNe06KY-bsqOlAO0tftnyIq8O973L5JlQH86dCZSlN4_k1hNXMBfoljhcnlDaQpMAvEiloyhUIsaP6M&sig=AOD64_1VE39HcHGGAsP0EeyS6sjfvE_R4g&q&adurl&ved=2ahUKEwia87itpvb0AhXEq5UCHa0aCV8Q0Qx6BAgDEAE">Google Drive</a> 
+                            como forma de armazenar os Jupyter Notebooks.
+                            Isso ocorreu por conta do uso do <a href="https://colab.research.google.com/?utm_source=scs-index">Google Colab</a>. No entanto, como uma forma de tornar os Notebooks públicos
                             e compartilhar o progresso do projeto, os arquivos foram publicados em um repositório disponível no GitHub.
-                            O repositório contém, em sua maioria, os Notebooks que foram utilizados para processamento de dados e criação dos modelos.
+                            O repositório contém, em sua maioria, os Jupyter Notebooks que foram utilizados para processamento de dados e criação dos modelos.
 
                             Outros anexos do projeto foram publicados no repositório também, como a API desenvolvida para disponibilizar o modelo,
                             bem como a definição dessa página.
@@ -195,8 +197,8 @@
                             Como uma forma de exemplificar um possível uso do classificador, os alunos desenvolveram uma simples aplicação composta
                             por uma página no <i>frontend</i> responsável por realizar requisições ao <i>backend</i> que, por sua vez, consulta o classificador.
                             <br/>
-                            Para isso, o usuário pode inserir a ementa do acórdão para utilizar o modelo e verificar uma predição do ramo do Direito ao qual o documento pertence.
-                            Um outro uso seria selecionar um dos acórdãos disponíveis na base de dados da própria aplicação que irá recuperar a ementa automaticamente.
+                            Para isso, o usuário pode inserir a ementa do acórdão na aplicação para utilizar o modelo e verificar uma predição do ramo do Direito ao qual o documento pertence.
+                            A aplicação também permite selecionar um dos acórdãos disponíveis na base de dados, recuperando a ementa automaticamente.
                             <br/>
                             Verifique uma demonstração ao lado.
                         </p>
